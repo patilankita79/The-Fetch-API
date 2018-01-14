@@ -25,3 +25,8 @@ For demonstrating fetching data from external API, https://api.github.com/users 
 ### Getting data from an external API
 <img src="https://github.com/patilankita79/The-Fetch-API/blob/master/Screenshots/GetDataFromExternalAPI.png">
 
+<hr>
+
+## Update to the project
+- In app.js, arrow functions are used.
+- Arrow functions use lexical this. So you don't have to worry about the scope of the function
