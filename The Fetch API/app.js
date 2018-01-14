@@ -4,21 +4,14 @@ document.getElementById('button1').addEventListener('click', getText);
 // Function to get a text from a local text file
 function getText() {
   fetch('test.txt')
-      .then(function(res) {
-        console.log(res);
-
-        // We get a promise when we do res.text() so again we have to call .then
-        // console.log(res.text());
-
-        return res.text();
-      })
-      .then(function(data) {
+      .then(res => res.text())
+      .then(data => {
         console.log(data);
 
         // Displaying to the UI
         document.getElementById('output').innerHTML = data;
       })
-      .catch(function(err) {
+      .catch(err=> {
         console.log(err);
 
         // Displaying to the UI
@@ -32,15 +25,8 @@ document.getElementById('button2').addEventListener('click', getJson);
 // Function to get json data from a local JSON file
 function getJson() {
   fetch('posts.json')
-      .then(function(res) {
-        console.log(res);
-
-        // We get a promise when we do res.text() so again we have to call .then
-        // console.log(res.text());
-
-        return res.json();
-      })
-      .then(function(data) {
+      .then(res => res.json())
+      .then(data => {
         console.log(data);
 
         // Displaying to the UI
@@ -50,7 +36,7 @@ function getJson() {
         });
         document.getElementById('output').innerHTML = output;
       })
-      .catch(function(err) {
+      .catch(err => {
         console.log(err);
 
         // Displaying to the UI
@@ -64,15 +50,8 @@ document.getElementById('button3').addEventListener('click', getDataFromExternal
 // Function to get the data from an external API
 function getDataFromExternalAPI() {
   fetch('https://api.github.com/users')
-      .then(function(res) {
-        console.log(res);
-
-        // We get a promise when we do res.text() so again we have to call .then
-        // console.log(res.text());
-
-        return res.json();
-      })
-      .then(function(data) {
+      .then(res => res.json())
+      .then(data => {
         console.log(data);
 
         // Displaying to the UI
@@ -82,7 +61,7 @@ function getDataFromExternalAPI() {
         });
         document.getElementById('output').innerHTML = output;
       })
-      .catch(function(err) {
+      .catch(err => {
         console.log(err);
 
         // Displaying to the UI
