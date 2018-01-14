@@ -12,3 +12,16 @@ For demonstrating fetching data from external API, https://api.github.com/users 
 - When you get a response from a promise, you have to use .then()
 - If there is some kind of error, then we can do .catch()
 
+<hr>
+
+# Example
+
+### Getting a data from a text file which is located locally
+<img src="https://github.com/patilankita79/The-Fetch-API/blob/master/Screenshots/GetDataFromTextFile.png">
+
+### Getting data from a JSON file which is located locally
+<img src="https://github.com/patilankita79/The-Fetch-API/blob/master/Screenshots/GetDataFromJSONFile.png">
+
+### Getting data from an external API
+<img src="https://github.com/patilankita79/The-Fetch-API/blob/master/Screenshots/GetDataFromExternalAPI.png">
+
